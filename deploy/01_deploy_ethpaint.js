@@ -12,8 +12,7 @@ module.exports = async({
 
     log("-----------------------------")
     const ETHPaint = await deploy("ETHPaintPro", {
-        from: deployer,
-        log: true
+        from: deployer
     })
     log(`Deployed contract to ${ETHPaint.address}`)
 
