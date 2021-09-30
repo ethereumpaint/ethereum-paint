@@ -3,19 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@nomiclabs/buidler": "^1.4.8",
-    "@nomiclabs/hardhat-ethers": "^2.0.2",
-    "@nomiclabs/hardhat-etherscan": "^2.1.6",
-    "@nomiclabs/hardhat-waffle": "^2.0.1",
     "@openzeppelin/contracts": "^4.3.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "base64-sol": "^1.0.1",
     "dotenv": "^10.0.0",
     "ethers": "^5.4.7",
     "fs": "^0.0.1-security",
-    "hardhat": "^2.6.4",
+    "gh-pages": "^3.2.3",
     "react": "^17.0.2",
     "react-color": "^2.19.3",
     "react-dom": "^17.0.2",
@@ -46,9 +41,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "hardhat-abi-exporter": "^2.3.0",
-    "hardhat-deploy": "^0.9.1"
   }
 }
