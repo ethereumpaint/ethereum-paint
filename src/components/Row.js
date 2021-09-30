@@ -11,8 +11,7 @@ export default function Row(props) {
     let pixels = [];
     
     
-    
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < 4; i++) {
         pixels.push(<Pixel key={i} id={i} selectedColor={selectedColor} getColor={getColor}/>)
     }
 

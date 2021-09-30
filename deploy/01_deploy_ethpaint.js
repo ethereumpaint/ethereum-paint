@@ -10,13 +10,13 @@ module.exports = async({
     const { deployer } = await getNamedAccounts()
     const chainId = await getChainId()
 
-    log("-----------------------------")
-    const ETHPaint = await deploy("ETHPaintPro", {
+    const ETHPaint = await deploy("ETHPaint", {
         from: deployer
     })
     log(`Deployed contract to ${ETHPaint.address}`)
 
-    const ethPaintContract = await ethers.getContractFactory("ETHPaintPro")
+    /// FULL TEST DEPLOYMENT
+    const ethPaintContract = await ethers.getContractFactory("ETHPaint")
     const accounts = await hre.ethers.getSigners()
     const signer = accounts[0]
     const ethPaint = new ethers.Contract(ETHPaint.address, ethPaintContract.interface, signer)
@@ -25,7 +25,6 @@ module.exports = async({
 
     let tx1 = await ethPaint.create()
     await tx1.wait(1)
-    // test 4x4
     let tx2 = await ethPaint.paint(0, [
         "rgb(126,211,33)", "rgb(126,211,33)", "rgb(184,233,84)", "rgb(123,243,216)",
         "rgb(126,211,33)", "rgb(184,233,84)", "rgb(126,211,33)", "rgb(184,233,84)",
@@ -33,11 +32,34 @@ module.exports = async({
         "rgb(123,243,216)", "rgb(126,211,33)", "rgb(184,233,84)", "rgb(123,243,216)"
     ])
     await tx2.wait(1)
-    log(`Success!`)
-    log(`You can view the tokenURI here ${await ethPaint.tokenURI(0)}`)
+    log(`it worked`)
+    log(`Token URI : ${await ethPaint.tokenURI(0)}`)
+
     tx3 = await ethPaint.create()
     await tx3.wait(1)
-    log(`I HAVE ${await ethPaint.balanceOf('0xf90C5B8571E762b561Dc6f354648e3203dcC103A')}`)
-    tx4 = await ethPaint.create()
+    let tx4 = await ethPaint.paint(1, [
+        "rgb(0,0,0)", "rgb(0,0,0)", "rgb(0,0,0)", "rgb(0,0,0)",
+        "rgb(0,0,0)", "rgb(0,0,0)", "rgb(0,0,0)", "rgb(0,0,0)",
+        "rgb(0,0,0)", "rgb(0,0,0)", "rgb(0,0,0)", "rgb(0,0,0)",
+        "rgb(0,0,0)", "rgb(0,0,0)", "rgb(0,0,0)", "rgb(0,0,0)",
+    ])
     await tx4.wait(1)
+
+    log(`Success!`)
+    log(`You can view the tokenURI here ${await ethPaint.tokenURI(1)}`)
+
+    let tx5 = await ethPaint.preserve(0,{value:ethers.utils.parseEther(".2")})
+    await tx5.wait(1)
+    let tx7 = await ethPaint.withdraw();
+    await tx7.wait(1)
+
+    log(`ready for fail`)
+
+    let tx6 = await ethPaint.paint(0, [
+        "rgb(0,0,0)", "rgb(0,0,0)", "rgb(0,0,0)", "rgb(0,0,0)",
+        "rgb(0,0,0)", "rgb(0,0,0)", "rgb(0,0,0)", "rgb(0,0,0)",
+        "rgb(0,0,0)", "rgb(0,0,0)", "rgb(0,0,0)", "rgb(0,0,0)",
+        "rgb(0,0,0)", "rgb(0,0,0)", "rgb(0,0,0)", "rgb(0,0,0)",
+    ])
+    await tx6.wait(1)
 } 

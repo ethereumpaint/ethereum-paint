@@ -2,17 +2,17 @@
 
 body,
 html {
+    border: 0;
     margin: 0;
     padding: 0;
 }
 
 body {
-    background: $black;
+    background: $grey;
     color: $white;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: "Play", sans-serif;
     text-align: center;
-    min-width: fit-content;
 }

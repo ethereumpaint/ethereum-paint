@@ -4,6 +4,9 @@ const networkConfig = {
     },
     4: {
         name: 'rinkeby'
+    },
+    1: {
+        name: 'mainnet'
     }
 }
 

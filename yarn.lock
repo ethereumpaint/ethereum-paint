@@ -6939,6 +6939,11 @@ handle-thing@^2.0.0:
   resolved "https://registry.yarnpkg.com/handle-thing/-/handle-thing-2.0.1.tgz#857f79ce359580c340d43081cc648970d0bb234e"
   integrity sha512-9Qn4yBxelxoh2Ow62nP+Ka/kMnOXRi8BXnRaUwezLNhqelnN49xKz4F/dPP8OYLxLxq6JDtZb2i9XznUQbNPTg==
 
+hardhat-abi-exporter@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/hardhat-abi-exporter/-/hardhat-abi-exporter-2.3.0.tgz#f7aeb56f2ceef1ccdb75a5b8d81dc80cbbfeefc4"
+  integrity sha512-9EVhogHgFWsi4Bc46tv+WirOR+auGBZrv9V5/qAHBjOqYiZPbNXoFUo/yQhOAsF8Bz4Q9p4jHpdeQXnYt7g6Yw==
+
 hardhat-deploy@^0.9.1:
   version "0.9.1"
   resolved "https://registry.yarnpkg.com/hardhat-deploy/-/hardhat-deploy-0.9.1.tgz#878bb10ef1bfcfee892477c2133295a250721672"
