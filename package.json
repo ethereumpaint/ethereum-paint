@@ -1,5 +1,5 @@
 {
-  "homepage": "http://ethereumpaint.github.io/ethereum-paint",
+  "homepage": "https://ethereumpaint.github.io/ethereum-paint",
   "name": "eth-paint",
   "version": "0.1.0",
   "private": true,
@@ -20,8 +20,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy": "gh-pages -d build",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
