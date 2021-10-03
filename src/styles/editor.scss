@@ -22,6 +22,11 @@
   color: black;
 }
 
+.preserve {
+  color:red;
+  list-style: none;
+}
+
 #editor {
   display: flex;
   flex-direction: column;

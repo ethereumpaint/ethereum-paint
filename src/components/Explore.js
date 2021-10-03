@@ -9,6 +9,7 @@ export default function Explore(props) {
     const {epAddress, epABI} = props;
     const [svg, setSvg] = useState([])
     const [notDisplayed, setNotDisplayed] = useState(true)
+    const [loading, setLoading] = useState(true)
     
     async function getPainting(id) {
         if (typeof window.ethereum !== 'undefined') {
@@ -57,8 +58,10 @@ export default function Explore(props) {
           canvas.push(<div key={i} className="row">{row}</div>)
           row = []
           rowCount = 0
+          setSvg(canvas)
         }
       }
+      setLoading(!loading)
       setSvg(canvas)
     }
 
@@ -66,5 +69,5 @@ export default function Explore(props) {
       retPainting()
       setNotDisplayed(!notDisplayed)
     }
-    return <div id="pixels">{svg}</div>
+    return <div id="pixels">{loading ? <div><p className="loadtext">loading...</p>{svg}</div> : svg}</div>
 }

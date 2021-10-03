@@ -71,7 +71,7 @@ export default function Editor() {
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner()
         const contract = new ethers.Contract(mainnetContractAddress, epABI, signer)
-        const transaction = await contract.create()
+        const transaction = await contract.create({gasLimit:450000})
         await transaction.wait()
         }
     }
@@ -127,7 +127,7 @@ export default function Editor() {
         <header><ul id="nav"><li><a href="#">Ethereum Paint</a></li><li><a href="#" onClick={requestAccount}>{ethAccount ? ethAccount : "Connect Wallet"}</a></li></ul></header>
         <div className="buttonGroup">
             <button onClick={mintCanvas}>
-                mint a canvas
+                mint a canvas (3 max)
             </button>
             <button onClick={initializeDrawingPanel}>
                 {buttonText}
@@ -150,13 +150,18 @@ export default function Editor() {
         </div>
         <div>
             {hidePreserve && (
-                <form>
-                    <label>
-                        canvas id:   
-                        <input type="number" defaultValue={canvasId} onChange={(e)=>handleId(e)}></input>
-                    </label>
-                    <input type="button" value="submit" onClick={preserveCanvas}/>
-                </form>
+                <ul className="preserve">
+                    <li>
+                        <li> are you sure you want to do this? </li>
+                        <form>
+                            <label>
+                                canvas id:   
+                                <input type="number" defaultValue={canvasId} onChange={(e)=>handleId(e)}></input>
+                            </label>
+                            <input type="button" value="submit" onClick={preserveCanvas}/>
+                        </form>
+                    </li>
+                </ul>
             )}
         </div>
         <div id="canvas">
