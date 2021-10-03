@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/ethereum-paint/static/css/main.5058d75a.chunk.css",
-    "main.js": "/ethereum-paint/static/js/main.17148e7e.chunk.js",
-    "main.js.map": "/ethereum-paint/static/js/main.17148e7e.chunk.js.map",
+    "main.css": "/ethereum-paint/static/css/main.e24088ae.chunk.css",
+    "main.js": "/ethereum-paint/static/js/main.5a6bd7b2.chunk.js",
+    "main.js.map": "/ethereum-paint/static/js/main.5a6bd7b2.chunk.js.map",
     "runtime-main.js": "/ethereum-paint/static/js/runtime-main.41654a9a.js",
     "runtime-main.js.map": "/ethereum-paint/static/js/runtime-main.41654a9a.js.map",
     "static/js/2.7c12ad82.chunk.js": "/ethereum-paint/static/js/2.7c12ad82.chunk.js",
     "static/js/2.7c12ad82.chunk.js.map": "/ethereum-paint/static/js/2.7c12ad82.chunk.js.map",
     "index.html": "/ethereum-paint/index.html",
-    "static/css/main.5058d75a.chunk.css.map": "/ethereum-paint/static/css/main.5058d75a.chunk.css.map",
+    "static/css/main.e24088ae.chunk.css.map": "/ethereum-paint/static/css/main.e24088ae.chunk.css.map",
     "static/js/2.7c12ad82.chunk.js.LICENSE.txt": "/ethereum-paint/static/js/2.7c12ad82.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.41654a9a.js",
     "static/js/2.7c12ad82.chunk.js",
-    "static/css/main.5058d75a.chunk.css",
-    "static/js/main.17148e7e.chunk.js"
+    "static/css/main.e24088ae.chunk.css",
+    "static/js/main.5a6bd7b2.chunk.js"
   ]
 }
